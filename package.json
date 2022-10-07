@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node Back/server.js",
     "dev":"SET NODE_ENV = DEVELOPMENT& nodemon Back/server",
-    "prod":"SET NODE_ENV = PRODUCTION& nodemon Back/server"
+    "prod":"SET NODE_ENV = PRODUCTION& nodemon Back/servergit"
   },
   "repository": {
     "type": "git",
