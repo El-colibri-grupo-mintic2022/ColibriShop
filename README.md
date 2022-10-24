@@ -1,2 +1,1 @@
-# eStore for an online pastry shop
-called Sebastiano Bake Shop
+# eStore for Sebastiano Bake Shop
