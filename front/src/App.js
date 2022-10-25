@@ -1,11 +1,14 @@
 
 import './App.css';
+import React from 'react';
+import Header from './components/layout/Header';
+import { Footer } from './components/layout/Footer';
 
 function App() {
   return (
     <div className="App">
-        <h1>Sebastiano Bake Shop</h1>
-        <img src=".\images\sebastiano bake shop logo (1).png" alt='Aqui va su logo'></img>
+      <Header />
+      <Footer/>
     </div>
   );
 }
