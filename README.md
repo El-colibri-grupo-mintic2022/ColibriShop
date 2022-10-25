@@ -1,1 +1,1 @@
-# eStore for oanline pastry shop
+# eStore for Sebastiano Bake Shop
