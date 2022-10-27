@@ -3,16 +3,17 @@ import React, { Fragment } from 'react'
 const header = () => {
   return (
     <Fragment>
- <nav className='navbar row'>
-                <div className='col-12 col-md-3 '>
+
+ <nav className='navbar row' >
+                <div className='col-12 col-md-2 ' >
                     <div className='navbar-brand'>
-                        <img src="images\sebastiano bake shop logo (1).png" alt="Sebastiano Bake Shop Logo"></img>
+                        <img src="images\sebastiano bake shop logo (1).png" class="img-fluid" alt="Sebastiano Bake Shop Logo"></img>
                     </div>
                 </div>
 
                 <div className='col-12 col-md-6 mt-2 mt-md-0'>
                     <div className="input-group">
-                        <input
+                        <input 
                             type="text"
                             id="search_field"
                             class="form-control"
@@ -30,6 +31,8 @@ const header = () => {
                     <i class="fa fa-shopping-cart fa-2x text-white" aria-hidden="false"></i>
                     <span className="ml-1" id="cart_count">2</span>
                 </div>
+
+                
 
             </nav>
     </Fragment>
