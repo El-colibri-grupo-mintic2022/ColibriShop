@@ -47,7 +47,8 @@ const productosSchema=mongoose.Schema({
                 "Muffins",
                 "Bebidas frias",
                 "Bebidas Calientes",
-                "Panaderia"
+                "Panaderia",
+                "Galletas"
             ]
         }
     },

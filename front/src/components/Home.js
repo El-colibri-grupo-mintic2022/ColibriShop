@@ -1,9 +1,19 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useEffect } from 'react'
+import MetaData from './layout/MetaData'
+import { useDispatch } from 'react-redux'
+import { getProducts } from '../actions/productActions'
 
 export const Home = () => {
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(getProducts());
+    }, [dispatch]) 
+
+
     return (
         <Fragment>
             {/*<h4 id="encabezado_productos">Productos Pasteleria</h4>*/}
+            <MetaData title=" 🎃 Halloween "></MetaData> 
 
             <section id="productos" className='container mt-5'>
                 <div className='row'>
