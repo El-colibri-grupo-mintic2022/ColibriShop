@@ -2,15 +2,23 @@ const producto = require("../models/productos")
 const fetch =(url)=>import('node-fetch').then(({default:fetch})=>fetch(url)); //Usurpación del require
 
 //ver la lista de productos
-exports. getProducts = async(req,res,next) =>{
-    const productos = await producto.find();
+exports.getProducts=async (req,res,next) =>{
+    const productos= await producto.find();
+    if (!productos){
+        return res.status(404).json({
+            success:false,
+            error:true
+        })
+    }
+
     res.status(200).json({
         success:true,
-        count: productos.length,
-        productos,
-        //message: "En esta ruta ud podra ver todos los productos" for show a message 
+        cantidad: productos.length,
+        productos
+        //message: "En esta ruta ud podra ver todos los productos" for show a message
     })
-} 
+}
+          
 
 //ver un prodcuto  por id
 exports.getProductById= async (req, res, next)=>{

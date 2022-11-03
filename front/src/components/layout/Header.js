@@ -1,19 +1,20 @@
-import React, { Fragment } from 'react'
+import React, {Fragment} from 'react'
+import "../../App.css"
 
-const header = () => {
-  return (
-    <Fragment>
+const Header = () => {
 
- <nav className='navbar row' >
-                <div className='col-12 col-md-2 ' >
+    return (
+        <Fragment>
+            <nav className='navbar row'>
+                <div className='col-12 col-md-3'>
                     <div className='navbar-brand'>
-                        <img src=".\images\logo.png" class="img-fluid" alt="Sebastiano Bake Shop Logo"></img>
+                        <img src="./images/logo.png" class = "img-fluid" alt="Vety Shop Store Logo"></img>
                     </div>
                 </div>
 
                 <div className='col-12 col-md-6 mt-2 mt-md-0'>
                     <div className="input-group">
-                        <input 
+                        <input
                             type="text"
                             id="search_field"
                             class="form-control"
@@ -32,11 +33,11 @@ const header = () => {
                     <span className="ml-1" id="cart_count">2</span>
                 </div>
 
-                
-
             </nav>
-    </Fragment>
-  )
-}
 
-export default header
+        </Fragment>
+    )
+
+    }
+
+export default Header
