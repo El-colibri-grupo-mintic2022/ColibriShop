@@ -7,7 +7,7 @@ const header = () => {
  <nav className='navbar row' >
                 <div className='col-12 col-md-2 ' >
                     <div className='navbar-brand'>
-                        <img src="images\sebastiano bake shop logo (1).png" class="img-fluid" alt="Sebastiano Bake Shop Logo"></img>
+                        <img src=".\images\logo.png" class="img-fluid" alt="Sebastiano Bake Shop Logo"></img>
                     </div>
                 </div>
 

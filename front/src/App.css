@@ -27,7 +27,7 @@ body {
 }
 
 nav {
-  background-color: #232f3e;
+  background-color: #e7e4e4e3;
   padding: 1rem 1rem;
 }
 
@@ -47,7 +47,7 @@ nav {
 
 #login_btn,
 #view_btn {
-  background-color: #febd69;
+  background-color: #763fb9;
   padding: 0.4rem 1.8rem;
   font-family: calibri;
 }
@@ -58,10 +58,10 @@ nav {
 }
 
 #cart_count {
-  background-color: #febd69;
+  background-color: #763fb9;
   padding: 0.2rem 0.5rem;
   border-radius: 0.2rem;
-  color: black;
+  color: rgb(255, 255, 255);
   font-weight: bold;
   font-size: 0.9rem;
 }
@@ -93,7 +93,7 @@ nav {
 }
 
 #view_btn {
-  background-color: #fa9c23;
+  background-color: #763fb9;
   color: white;
 }
 

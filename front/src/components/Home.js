@@ -20,7 +20,7 @@ export const Home = () => {
                     {/*Producto 1*/}
                     <div className='col-sm-12 col-md-6 col-lg-3 my-3'>
                         <div className='card p-3 rounded'>
-                            <img className='card-img-top mx-auto' src='\images\cupcakes con foto.jpg' alt="Cupcakes"></img>
+                            <img className='card-img-top mx-auto' src='.\images\Productos\cupcake.jpg' alt="Cupcakes"></img>
                             <div className='card-body d-flex flex-column'>
                                 <h5 id="titulo_producto"><a href='http://localhost:3000'>Cupcakes</a></h5>
                                 <div className='rating mt-auto'>
@@ -39,7 +39,7 @@ export const Home = () => {
                     {/*Producto 2*/}
                     <div className='col-sm-12 col-md-6 col-lg-3 my-3'>
                         <div className='card p-3 rounded'>
-                            <img className='card-img-top mx-auto' src='.\images\galletas con foto.jpg' alt="Galletas"></img>
+                            <img className='card-img-top mx-auto' src='.\images\Productos\galleta.jpg' alt="Galletas"></img>
                             <div className='card-body d-flex flex-column'>
                                 <h5 id="titulo_producto"><a href='http://localhost:3000'>Galletas</a></h5>
                                 <div className='rating mt-auto'>
@@ -58,7 +58,7 @@ export const Home = () => {
                     {/*Producto 3*/}
                     <div className='col-sm-12 col-md-6 col-lg-3 my-3'>
                         <div className='card p-3 rounded'>
-                            <img className='card-img-top mx-auto' src='.\images\ponque tematico con foto.jpg' alt="Ponque Tematico"></img>
+                            <img className='card-img-top mx-auto' src='.\images\Productos\ponqueTematico.jpg' alt="Ponque Tematico"></img>
                             <div className='card-body d-flex flex-column'>
                                 <h5 id="titulo_producto"><a href='http://localhost:3000'>Ponque Tematico</a></h5>
                                 <div className='rating mt-auto'>
@@ -78,7 +78,7 @@ export const Home = () => {
                     {/*Producto 4*/}
                     <div className='col-sm-12 col-md-6 col-lg-3 my-3'>
                         <div className='card p-3 rounded'>
-                            <img className='card-img-top mx-auto' src='.\images\torta con foto.jpg' alt="Tortas"></img>
+                            <img className='card-img-top mx-auto' src='.\images\Productos\tortas.jpg' alt="Tortas"></img>
                             <div className='card-body d-flex flex-column'>
                                 <h5 id="titulo_producto"><a href='http://localhost:3000'>Tortas</a></h5>
                                 <div className='rating mt-auto'>
