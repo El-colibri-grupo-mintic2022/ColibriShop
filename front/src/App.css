@@ -69,6 +69,7 @@ nav {
 /* Home page */
 #products_heading {
   margin-top: 1.8rem;
+  
 }
 
 .card {
@@ -127,7 +128,7 @@ footer {
   display: inline-block;
   position: relative;
   font-family: FontAwesome;
-  color: #fdcc0d;
+  color: #df0f7b;
 }
 
 .rating-outer::before {
