@@ -8,7 +8,7 @@ const Header = () => {
             <nav className='navbar row'>
                 <div className='col-12 col-md-3'>
                     <div className='navbar-brand'>
-                        <img src="./images/logo.png" class = "img-fluid" alt="Vety Shop Store Logo"></img>
+                        <img src="./images/logo.png" class = "img-fluid" alt="SBS Logo"></img>
                     </div>
                 </div>
 
