@@ -6,6 +6,7 @@ import Sidebar from './Sidebar'
 import { useAlert } from 'react-alert'
 import { useDispatch, useSelector } from 'react-redux'
 import { getProducts } from '../../actions/productActions'
+import {Link } from "react-router-dom"
 
 export const ProductsList = () => {
     const { loading, productos, error} = useSelector(state=> state.products)
@@ -22,12 +23,7 @@ export const ProductsList = () => {
 
     const setProducts = () => {
         const data = {
-            columns: [
-                {
-                    label: 'ID',
-                    field: 'id',
-                    sort: 'asc'
-                },
+            columns: [ 
                 {
                     label: 'Nombre',
                     field: 'nombre',
@@ -43,16 +39,38 @@ export const ProductsList = () => {
                     field: 'inventario',
                     sort: 'asc'
                 },
+                {
+                    label: 'Vendedor',
+                    field: 'vendedor',
+                    sort: 'asc'
+                },
+                {
+                    label: 'Acciones',
+                    field: 'actions',
+                },
             ],
             rows: []
         }
 
         productos.forEach(product => {
             data.rows.push({
-                id: product._id,
                 nombre: product.nombre,
                 precio: `$${product.precio}`, //because is a value
                 inventario: product.inventario,
+                vendedor: product.vendedor,
+                actions: <Fragment>
+                    <Link to={`/producto/${product._id}`} className="btn btn-primary py-1 px-2">
+                        <i className="fa fa-eye"></i>
+                    </Link><Link to="/" className="btn btn-warning py-1 px-2">
+                    <i class="fa fa-pencil"></i>
+                    </Link>
+
+                    <Link to="/" className="btn btn-danger py-1 px-2">
+                        <i className="fa fa-trash"></i>
+                    </Link>
+
+
+                </Fragment>
             })
         })
 
