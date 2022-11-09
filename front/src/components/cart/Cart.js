@@ -19,7 +19,7 @@ const Cart = () => {
       setQuantity(qty)
    }
 
-    //Json de ejemplo
+    //Json 
    let cartItems=[
         {
             "_id": "6362fb736ca76c2785d28d46",
