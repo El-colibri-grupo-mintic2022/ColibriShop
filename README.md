@@ -1,2 +1,0 @@
-# ColibriShop
-Tienda Virtual
