@@ -82,7 +82,7 @@ exports.forgotPassword = catchAsyncErrors ( async( req, res, next) =>{
     try{
         await sendEmail({
             email:user.email,
-            subject: "VetyShop Recuperación de la contraseña",
+            subject: "SBS Recuperación de la contraseña",
             mensaje
         })
         res.status(200).json({
