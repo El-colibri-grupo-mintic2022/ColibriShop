@@ -3,9 +3,13 @@ const connectDatabase = require("./configuracion/database");
 const cloudinary = require("cloudinary")
 
 //Setear el archivo de configuración ////setear el archivo de configuracion (``, ``); node back/server.js , npm i nodemon --save-dev (esto para instalar nuevas dependencias)
-const dotenv=require("dotenv");
-const { connect } = require("mongoose");
-dotenv.config({path: 'back/configuracion/configur.env'})
+// const dotenv=require("dotenv"); si no funciona en adelante, descomento estas tres lineas
+// const { connect } = require("mongoose");
+// dotenv.config({path: 'back/configuracion/configur.env'})
+
+//Seteamos archivo de configuracion
+if(process.env.NODE_ENV==="PRODUCTION") require('dotenv').config({path:'back/configuracion/configur.env'})
+
 
 //configurar base de datos
 connectDatabase();

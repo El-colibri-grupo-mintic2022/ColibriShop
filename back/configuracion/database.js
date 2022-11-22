@@ -1,7 +1,8 @@
 const mongoose=require("mongoose");
 
 const connectDatabase = () => {
-    mongoose.connect(process.env.DB_LOCAL_URI, {
+    //para conectar con db Atlas, aqui mongoose.connect(process.env.DB_LOCAL_URI, quitamos el LOCAL_
+    mongoose.connect(process.env.DB_URI, {
         useNewUrlParser: true,
         useUnifiedTopology: true
     }).then(con => {
