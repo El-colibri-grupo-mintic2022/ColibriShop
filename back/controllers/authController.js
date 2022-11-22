@@ -89,7 +89,7 @@ exports.forgotPassword = catchAsyncErrors ( async( req, res, next) =>{
     try{
         await sendEmail({
             email:user.email,
-            subject: "ColibriShop Recuperación de la contraseña",
+            subject: "VetyShop Recuperación de la contraseña",
             mensaje
         })
         res.status(200).json({
@@ -232,7 +232,7 @@ exports.updateUser= catchAsyncErrors (async(req, res, next)=>{
     const nuevaData={
         nombre: req.body.nombre,
         email: req.body.email,
-        role: req.body.rol
+        role: req.body.role
     }
 
     const user= await User.findByIdAndUpdate(req.params.id, nuevaData, {

@@ -9,11 +9,11 @@ const sendEmail = async options =>{
       auth: {
         user: "ceciliojose2@hotmail.com",
        // pass: "46b3500fd4f1ef" antiguo Mailtrap
-       pass: "atuwygcggiwdziio"
+       pass: "uqmbfustkizhgtcu"
       }
     });
     const mensaje={
-        from: "Colibrishop Store <ceciliojose2@hotmail.com>",
+        from: "Colibrishop 22 Store <ceciliojose2@hotmail.com>",
         to: options.email,
         subject: options.subject,
         text: options.mensaje

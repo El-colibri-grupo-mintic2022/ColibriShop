@@ -6,13 +6,26 @@ const ErrorHandler = require("../utils/errorHandler");
 //Crear una nueva orden
 exports.newOrder= catchAsyncErrors (async (req, res, next)=>{
     const {
-        Items, envioInfo,
-        precioItems, precioImpuesto,
-        precioEnvio, precioTotal, pagoInfo } = req.body;
+        items,
+        envioInfo,
+        precioItems,
+        precioImpuesto,
+        precioEnvio,
+        precioTotal,
+        pagoInfo
+    } = req.body;
 
-    const order= await Order.create({ Items, envioInfo,
-        precioItems, precioImpuesto, precioEnvio, precioTotal,
-        pagoInfo, fechaPago: Date.now(), user: req.user._id })
+    const order= await Order.create({
+        items,
+        envioInfo,
+        precioItems,
+        precioImpuesto,
+        precioEnvio,
+        precioTotal,
+        pagoInfo,
+        fechaPago: Date.now(),
+        user: req.user._id
+    })
 
     res.status(201).json({
         success:true,
@@ -71,10 +84,17 @@ exports.updateOrder= catchAsyncErrors(async(req, res, next)=>{
         return next (new ErrorHandler("Orden no encontrada", 404))
     }
 
-    if (order.estado==="Enviado"){
+    if (order.estado==="Enviado" && req.body.estado==="Enviado"){
         return next(new ErrorHandler("Esta orden ya fue enviada", 400))
     }
 
+    //Restamos del inventario
+    if (req.body.estado!=="Procesando"){
+        order.items.forEach(async item => {
+            await updateStock(item.producto, item.cantidad)
+        })
+    }
+   
     order.estado= req.body.estado;
     order.fechaEnvio= Date.now();
 

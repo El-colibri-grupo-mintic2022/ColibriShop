@@ -1,4 +1,3 @@
-
 import React, { Fragment } from 'react'
 import "../../App.css"
 import { Link } from "react-router-dom"
@@ -8,6 +7,8 @@ import { useAlert } from 'react-alert'
 import { logout} from "../../actions/userActions"
 
 const Header = () => {
+    const {cartItems} = useSelector(state=>state.cart)
+    
     const alert= useAlert();
     const dispatch= useDispatch();
 
@@ -23,7 +24,8 @@ const Header = () => {
                 <div className='col-12 col-md-3'>
                     <div className='navbar-brand'>
 
-                        <Link to="/" ><img src="./images/productos/colibrishop-logo.jpg" alt="COLIBRISHOP 22"></img></Link>
+                        <Link to="/" ><img src="../images/productos/colibrishop-logo.jpg" alt="COLIBRISHOP 22"></img></Link>
+                        
                         </div>
                 </div>
 
@@ -34,7 +36,7 @@ const Header = () => {
                 {/*Boton inicio sesión*/}
                 <div className="col-12 col-md-4 mt-4 mt-md-0 text-center">
                     <Link to="/carrito"><i class="fa fa-shopping-cart fa-2x text-white" aria-hidden="false"></i>
-                        <span className="ml-1" id="cart_count">2</span></Link>
+                        <span className="ml-1" id="cart_count">{cartItems.length}</span></Link>
 
                     {user ? (
                         <div className="ml-4 dropdown d-inline">
@@ -54,7 +56,7 @@ const Header = () => {
                                     <Link className="dropdown-item" to="/dashboard">Adm. Productos</Link>
                                 )}
 
-                                <Link className="dropdown-item" to="/">Pedidos</Link>
+                                <Link className="dropdown-item" to="/myOrders">Pedidos</Link>
                                 <Link className="dropdown-item" to="/yo">Mi Perfil</Link>
                                 <Link className="dropdown-item" to="/" onClick={logoutHandler}>Cerrar Sesion</Link>
                             </div>
@@ -73,60 +75,3 @@ const Header = () => {
 
 export default Header
 
-//este Header me funciona
-/*import React, { Fragment } from 'react'
-import "../../App.css"
-import {Link} from "react-router-dom"
-const Header = () => {
-
-    return (
-        <Fragment>
-            <nav className='navbar row'>
-                <div className='col-12 col-md-3'>
-                    <div className='navbar-brand'>
-
-                        <Link to="/" ><img src="./images/productos/colibrishop-logo.jpg" alt="COLIBRISHOP 22"></img></Link>
-                    
-                    </div>
-                </div>
-
-                <div className='col-12 col-md-6 mt-2 mt-md-0'>
-                    <div className="input-group">
-                        <input
-                            type="text"
-                            id="search_field"
-                            class="form-control"
-                            placeholder='Que producto busca?'></input>
-                        <div class="input-group-append">
-                            <button id="search-btn" class="btn">
-                                <i class="fa fa-search-plus fa-2x text-white" aria-hidden="true"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-12 col-md-3 mt-4 mt-md-0 text-center">
-
-                    <div className="ml-4 dropdown d-inline">
-                        <Link to="#!" className="btn dropdown-toggle text-white mr-4" type="button"
-                            id="dropDownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span><h4>Panel de Control</h4></span></Link>
-                        <div className='dropdown-menu' aria-labelledby='dropDownMenu'>
-                            <Link className="dropdown-item" to="/dashboard"><h4>Adm. Productos</h4></Link>
-                            <Link className="dropdown-item" to="/"><h4>Pedidos</h4></Link>
-                            <Link className="dropdown-item" to="/"><h4>Mi cuenta</h4></Link>
-                            <Link className="dropdown-item" to="/"><h4>Cerrar Sesión</h4></Link>
-                        </div>
-                    </div>
-
-                    <Link to="/carrito"><i class="fa fa-shopping-cart fa-2x text-white" aria-hidden="false"></i>
-                        <span className="ml-2" id="cart_count">2</span></Link>
-                </div>
-
-            </nav>
-
-        </Fragment>
-    )
-
-}
-
-export default Header*/
